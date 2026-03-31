@@ -2,14 +2,16 @@
   "raiane": {
     "nome": "Raiane Oliveira",
     "nascimento": "27/05/1995",
-    "consulta": {
-      "data": "20 de Abril, 2026",
-      "hora": "09:00",
-      "profissional": "Dra. Raiane",
-      "especialidade": "Nutricionista",
-      "modalidade": "Presencial",
-      "status": "Confirmada"
-    },
+    "consultas": [
+      {
+        "data": "20 de Abril, 2026",
+        "hora": "09:00",
+        "profissional": "Dra. Raiane",
+        "especialidade": "Nutricionista",
+        "modalidade": "Presencial",
+        "status": "Confirmada"
+      }
+    ],
     "historico": [
       {
         "data": "10 de Março, 2026",
@@ -24,14 +26,16 @@
   "giulliano": {
     "nome": "Giulliano Guimarães",
     "nascimento": "30/01/1990",
-    "consulta": {
-      "data": "08 de Abril, 2026",
-      "hora": "14:30",
-      "profissional": "Dra. Mariana Melendez",
-      "especialidade": "Nutricionista",
-      "modalidade": "Online",
-      "status": "Aguardando exames"
-    },
+    "consultas": [
+      {
+        "data": "08 de Abril, 2026",
+        "hora": "14:30",
+        "profissional": "Dra. Mariana Melendez",
+        "especialidade": "Nutricionista",
+        "modalidade": "Online",
+        "status": "Aguardando exames"
+      }
+    ],
     "historico": [
       {
         "data": "19 de Fev, 2026",
@@ -51,24 +55,23 @@
       }
     ]
   },
- {
-  "Tiago ": {
+  "tiago": {
     "nome": "Tiago Fernandes Curto",
     "nascimento": "04/02/2008",
     "consultas": [
       {
-        "data": "30 de maio,2026",
+        "data": "30 de Maio, 2026",
         "hora": "11:30",
-        "profissional": "Dra. Thicianie ",
+        "profissional": "Dra. Thicianie",
         "especialidade": "Gastroenterologista",
         "modalidade": "Presencial",
         "status": "Confirmada"
       },
       {
-        "data": "30 de maio,2026",
+        "data": "30 de Maio, 2026",
         "hora": "11:30",
-        "profissional": "Dra. Mariana ",
-        "especialidade": "",
+        "profissional": "Dra. Mariana",
+        "especialidade": "Nutricionista",
         "modalidade": "Presencial",
         "status": "Confirmada"
       }
@@ -119,14 +122,16 @@
   "maria": {
     "nome": "Maria Santos",
     "nascimento": "22/07/1985",
-    "consulta": {
-      "data": "18 de Abril, 2026",
-      "hora": "10:30",
-      "profissional": "Dra. Mariana Melendez",
-      "especialidade": "Gastroenterologista",
-      "modalidade": "Online",
-      "status": "Confirmada"
-    },
+    "consultas": [
+      {
+        "data": "18 de Abril, 2026",
+        "hora": "10:30",
+        "profissional": "Dra. Mariana Melendez",
+        "especialidade": "Gastroenterologista",
+        "modalidade": "Online",
+        "status": "Confirmada"
+      }
+    ],
     "historico": []
   }
 }
