@@ -20,17 +20,30 @@
       }
     ]
   },
-  "joao": {
-    "nome": "João Silva",
-    "nascimento": "15/03/1990",
+  "giulliano": {
+    "nome": "Giulliano Guimarães",
+    "nascimento": "30/01/1990",
     "consulta": {
-      "data": "15 de Abril, 2026",
-      "hora": "14:00",
-      "nutricionista": "Dra. Raiane — FAUVE clinic",
-      "modalidade": "Presencial",
-      "status": "Confirmada"
+      "data": "08 de Abril, 2026",
+      "hora": "14:30",
+      "nutricionista": "Dra. Mariana Melendez e Dra. Thicianie — FAUVE clinic",
+      "modalidade": "Online",
+      "status": "Aguardando confirmação"
     },
-    "historico": []
+    "historico": [
+      {
+        "data": "19 de Março, 2026",
+        "hora": "18:00",
+        "modalidade": "Online",
+        "status": "Realizada"
+      }
+       {
+        "data": "24 de Março, 2026",
+        "hora": "16:00",
+        "modalidade": "Online",
+        "status": "Realizada"
+      }
+    ]
   },
   "maria": {
     "nome": "Maria Santos",
