@@ -57,9 +57,9 @@
     "consulta": {
       "data": "30 de Abril, 2026",
       "hora": "11:30",
-      "profissional": "Dra. Mariana Melendez e Dra.Thicianie",
-      "especialidade": "Nutricionista e Gastroenterologista",
-      "modalidade": "Online",
+      "profissional": "Dra.Thicianie",
+      "especialidade": "Gastroenterologista",
+      "modalidade": "Presencial",
       "status": "Confirmada"
     },
     "historico": [
