@@ -249,21 +249,48 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 <div id="s-consultas" class="screen sb">
 <div class="px-5 pt-5 pb-6">
 <h2 class="font-display text-3xl font-bold text-fauve-800 mb-6 af">Consultas</h2>
-<div id="cCard" class="hidden bg-white rounded-2xl p-6 shadow-sm border border-sand-300/50 af as1">
-<div class="flex items-center gap-4 mb-5 pb-5 border-b border-sand-200">
-<div class="w-14 h-14 rounded-xl bg-fauve/10 flex items-center justify-center"><svg class="w-7 h-7 text-fauve" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
-<div><p class="text-xs text-fauve-400 font-semibold uppercase tracking-widest">Próxima consulta</p><p class="font-display text-xl font-bold text-fauve-800" id="cDt">--</p></div>
+
+<!-- Card principal -->
+<div id="cCard" class="hidden bg-white rounded-2xl shadow-sm border border-sand-300/50 overflow-hidden af as1">
+<!-- Header verde -->
+<div class="bg-fauve/5 px-6 py-4 border-b border-sand-200">
+<p class="text-[10px] text-fauve-400 font-bold uppercase tracking-[0.2em] mb-1">Proxima consulta</p>
+<p class="font-display text-2xl font-bold text-fauve-800" id="cDt">--</p>
 </div>
-<div class="space-y-4">
-<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Horário</span><span class="text-base font-bold text-fauve-700" id="cHr">--</span></div>
-<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Profissional</span><span class="text-base font-bold text-fauve-700" id="cNu">--</span></div>
-<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Especialidade</span><span class="text-base font-bold text-fauve-700" id="cEsp">--</span></div>
-<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Modalidade</span><span class="text-base font-bold text-fauve-700" id="cMo">--</span></div>
-<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Status</span><span class="text-sm font-bold px-4 py-1.5 rounded-full bg-sage-light/15 text-sage-dark" id="cSt">--</span></div>
-</div></div>
+<!-- Info grid -->
+<div class="px-6 py-5">
+<div class="grid grid-cols-2 gap-4 mb-4">
+<div>
+<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Horario</p>
+<p class="text-lg font-bold text-fauve-800" id="cHr">--</p>
+</div>
+<div>
+<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Modalidade</p>
+<p class="text-lg font-bold text-fauve-800" id="cMo">--</p>
+</div>
+</div>
+<div class="mb-4">
+<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Profissional</p>
+<p class="text-base font-bold text-fauve-800" id="cNu">--</p>
+</div>
+<div class="mb-4">
+<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Especialidade</p>
+<p class="text-base font-bold text-fauve-800" id="cEsp">--</p>
+</div>
+<div>
+<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1.5">Status</p>
+<span class="text-sm font-bold px-4 py-1.5 rounded-full bg-sage-light/15 text-sage-dark inline-block" id="cSt">--</span>
+</div>
+</div>
+</div>
+
 <div id="noC" class="hidden text-center py-14 af"><p class="text-5xl mb-4 opacity-30">?</p><p class="font-display text-xl font-bold text-fauve-700">Nenhuma consulta agendada</p><p class="text-base text-fauve-400 mt-2">Entre em contato com a equipe FAUVE</p></div>
 <div id="loadC" class="text-center py-14"><p class="text-base text-fauve-400">Carregando dados...</p></div>
-<div id="histBlock" class="hidden mt-6 af as2"><h3 class="text-sm font-bold text-fauve-400 uppercase tracking-widest mb-3">Histórico</h3><div id="histList" class="space-y-3"></div></div>
+
+<!-- Historico -->
+<div id="histBlock" class="hidden mt-6 af as2"><h3 class="text-[10px] font-bold text-fauve-400 uppercase tracking-[0.2em] mb-3">Historico de Consultas</h3><div id="histList" class="space-y-2.5"></div></div>
+
+<!-- Paciente -->
 <div class="mt-5 bg-sand-100 rounded-xl p-5 text-center af as3"><p class="text-xs text-fauve-400">Paciente</p><p class="text-lg font-bold text-fauve-700" id="cPa">--</p></div>
 </div></div>
 
@@ -322,7 +349,7 @@ function applyPatient(pn,pb,pd){
   var hist=pd&&pd.historico?pd.historico:[];
   var hL=document.getElementById('histList');var hB=document.getElementById('histBlock');
   if(!hist.length){hB.classList.add('hidden')}
-  else{hB.classList.remove('hidden');hL.innerHTML=hist.map(function(h){return'<div class="bg-white rounded-xl p-4 border border-sand-300/50 opacity-50"><div class="flex justify-between items-center"><div><p class="text-sm font-bold text-fauve-700">'+h.data+'</p><p class="text-xs text-fauve-400">'+h.hora+' — '+(h.profissional||'')+'</p><p class="text-xs text-fauve-400">'+(h.especialidade||'')+' — '+h.modalidade+'</p></div><span class="text-xs font-bold px-3 py-1 rounded-full bg-sand-200 text-fauve-400">'+h.status+'</span></div></div>'}).join('')}
+  else{hB.classList.remove('hidden');hL.innerHTML=hist.map(function(h){return'<div class="bg-white rounded-xl p-4 border border-sand-300/50 opacity-50"><div class="grid grid-cols-2 gap-2 mb-2"><div><p class="text-sm font-bold text-fauve-700">'+h.data+'</p><p class="text-xs text-fauve-400">'+h.hora+'</p></div><div class="text-right"><span class="text-[10px] font-bold px-3 py-1 rounded-full bg-sand-200 text-fauve-400 inline-block">'+h.status+'</span></div></div><div class="flex items-center gap-2 text-xs text-fauve-400"><span class="font-semibold">'+(h.profissional||'--')+'</span><span>·</span><span>'+(h.especialidade||'--')+'</span><span>·</span><span>'+h.modalidade+'</span></div></div>'}).join('')}
 }
 
 nav('diario');loadPatient();
