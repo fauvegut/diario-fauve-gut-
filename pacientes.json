@@ -54,8 +54,8 @@
         "status": "Realizada"
       }
     ]
- {
-  "Tiago": {
+  },
+  "tiago": {
     "nome": "Tiago Fernandes Curto",
     "nascimento": "04/02/2008",
     "consultas": [
@@ -76,7 +76,7 @@
         "status": "Confirmada"
       },
       {
-        "data": "30 de maio, 2026",
+        "data": "30 de Maio, 2026",
         "hora": "11:30",
         "profissional": "Dra. Thicianie",
         "especialidade": "Gastroenterologista",
@@ -84,10 +84,10 @@
         "status": "Confirmada"
       },
       {
-        "data": "30 de maio, 2026",
+        "data": "30 de Maio, 2026",
         "hora": "11:30",
         "profissional": "Dra. Mariana",
-        "especialidade": "",
+        "especialidade": "Nutricionista",
         "modalidade": "Presencial",
         "status": "Confirmada"
       }
