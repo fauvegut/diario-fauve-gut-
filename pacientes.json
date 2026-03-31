@@ -28,23 +28,23 @@
       "data": "08 de Abril, 2026",
       "hora": "14:30",
       "profissional": "Dra. Mariana Melendez",
-      "especialidade": "Gastroenterologista",
+      "especialidade": "Nutricionista",
       "modalidade": "Online",
       "status": "Aguardando confirmação"
     },
     "historico": [
       {
-        "data": "19 de Março, 2026",
+        "data": "19 de Fev, 2026",
         "hora": "18:00",
-        "profissional": "Dra. Thicianie",
-        "especialidade": "Psicóloga",
+        "profissional": "Dra. Mariana",
+        "especialidade": "Nutricionista",
         "modalidade": "Online",
         "status": "Realizada"
       },
       {
         "data": "24 de Março, 2026",
         "hora": "16:00",
-        "profissional": "Dra. Raiane",
+        "profissional": "Dra. Mariana",
         "especialidade": "Nutricionista",
         "modalidade": "Online",
         "status": "Realizada"
