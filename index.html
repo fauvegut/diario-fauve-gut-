@@ -55,7 +55,7 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 
 <div class="bg-white rounded-2xl p-6 shadow-sm border border-sand-300/50 mb-7 af">
 <span class="font-display text-2xl font-bold text-fauve-800 block">Bem-vindo ao seu Diário Alimentar!</span>
-<p class="text-base text-fauve-600 mt-2 leading-relaxed">Preencha o máximo de vezes possíveis para melhor avaliarmos sua digestão.</p>
+<p class="text-base text-fauve-600 mt-2 leading-relaxed">Preencha com sinceridade para avaliarmos sua digestão.</p>
 </div>
 
 <form id="f1" action="https://formspree.io/f/mojpdooy" method="POST">
@@ -88,6 +88,7 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 </div>
 <div id="dEx" class="cr"><textarea name="o_que_comeu" rows="3" placeholder="O que saiu fora do planejado?" class="w-full px-4 py-3.5 rounded-xl border-[1.5px] border-sand-300 bg-white text-base placeholder:text-fauve-400/60 focus:outline-none focus:border-fauve resize-none"></textarea></div>
 </div>
+
 
 <div class="mb-8 af as3">
 <h3 class="text-lg font-bold text-fauve-700 mb-2">Percepção Digestiva</h3>
@@ -222,8 +223,30 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 
 </div></div>
 
+<!-- ATIVIDADE FISICA -->
+<div class="bg-white rounded-2xl p-5 shadow-sm border border-sand-300/50 mb-5 af as3">
+<h3 class="text-lg font-bold text-fauve-700 mb-2">Atividade F&#237;sica</h3>
+<p class="text-sm text-fauve-400 mb-4">Quantos dias voc&#234; praticou atividade f&#237;sica esta semana?</p>
+<div class="flex items-center gap-5 mb-4">
+<button type="button" onclick="stp('acC',-1)" class="w-12 h-12 rounded-xl bg-sand-200 flex items-center justify-center text-fauve-700 font-bold text-xl active:scale-90 transition-transform">-</button>
+<input type="number" name="dias_atividade_fisica" id="acC" value="0" min="0" max="7" readonly class="w-20 text-center text-2xl font-bold text-fauve-800 bg-transparent border-none focus:outline-none">
+<button type="button" onclick="stp('acC',1)" class="w-12 h-12 rounded-xl bg-sand-200 flex items-center justify-center text-fauve-700 font-bold text-xl active:scale-90 transition-transform">+</button>
+<span class="text-sm text-fauve-400">dias</span>
+</div>
+<p class="text-sm text-fauve-600 font-semibold mb-3">Que tipo de atividade?</p>
+<div class="flex flex-wrap gap-2.5">
+<input type="radio" name="tipo_atividade" value="Caminhada" id="at1" class="chip-r hidden"><label for="at1" class="px-5 py-3 rounded-full border-[1.5px] border-sand-300 bg-white text-base font-medium cursor-pointer transition-all hover:border-fauve-400">Caminhada</label>
+<input type="radio" name="tipo_atividade" value="Musculação" id="at2" class="chip-r hidden"><label for="at2" class="px-5 py-3 rounded-full border-[1.5px] border-sand-300 bg-white text-base font-medium cursor-pointer transition-all hover:border-fauve-400">Muscula&#231;&#227;o</label>
+<input type="radio" name="tipo_atividade" value="Corrida" id="at3" class="chip-r hidden"><label for="at3" class="px-5 py-3 rounded-full border-[1.5px] border-sand-300 bg-white text-base font-medium cursor-pointer transition-all hover:border-fauve-400">Corrida</label>
+<input type="radio" name="tipo_atividade" value="Yoga/Pilates" id="at4" class="chip-r hidden"><label for="at4" class="px-5 py-3 rounded-full border-[1.5px] border-sand-300 bg-white text-base font-medium cursor-pointer transition-all hover:border-fauve-400">Yoga / Pilates</label>
+<input type="radio" name="tipo_atividade" value="Natação" id="at5" class="chip-r hidden"><label for="at5" class="px-5 py-3 rounded-full border-[1.5px] border-sand-300 bg-white text-base font-medium cursor-pointer transition-all hover:border-fauve-400">Nata&#231;&#227;o</label>
+<input type="radio" name="tipo_atividade" value="Nenhuma" id="at6" class="chip-r hidden"><label for="at6" class="px-5 py-3 rounded-full border-[1.5px] border-sand-300 bg-white text-base font-medium cursor-pointer transition-all hover:border-fauve-400">Nenhuma</label>
+<input type="radio" name="tipo_atividade" value="Outro" id="at7" class="chip-r hidden"><label for="at7" class="px-5 py-3 rounded-full border-[1.5px] border-sand-300 bg-white text-base font-medium cursor-pointer transition-all hover:border-fauve-400">Outro</label>
+</div>
+</div>
+
 <!-- SONO -->
-<div class="bg-white rounded-2xl p-5 shadow-sm border border-sand-300/50 mb-6 af as3">
+<div class="bg-white rounded-2xl p-5 shadow-sm border border-sand-300/50 mb-6 af as4">
 <h3 class="text-lg font-bold text-fauve-700 mb-4">Higiene do Sono</h3>
 <div class="grid grid-cols-2 gap-3 mb-4">
 <div><label class="text-sm text-fauve-600 font-semibold block mb-2">Dormiu às:</label><input type="time" name="hora_dormir" id="tS" required onchange="cS()" class="w-full px-4 py-3 rounded-xl border-[1.5px] border-sand-300 bg-white text-base focus:outline-none focus:border-fauve"></div>
@@ -254,45 +277,14 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 <div class="px-5 pt-5 pb-6">
 <h2 class="font-display text-3xl font-bold text-fauve-800 mb-6 af">Consultas</h2>
 
-<!-- Card principal -->
-<div id="cCard" class="hidden bg-white rounded-2xl shadow-sm border border-sand-300/50 overflow-hidden af as1">
-<!-- Header verde -->
-<div class="bg-fauve/5 px-6 py-4 border-b border-sand-200">
-<p class="text-[10px] text-fauve-400 font-bold uppercase tracking-[0.2em] mb-1">Proxima consulta</p>
-<p class="font-display text-2xl font-bold text-fauve-800" id="cDt">--</p>
-</div>
-<!-- Info grid -->
-<div class="px-6 py-5">
-<div class="grid grid-cols-2 gap-4 mb-4">
-<div>
-<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Horario</p>
-<p class="text-lg font-bold text-fauve-800" id="cHr">--</p>
-</div>
-<div>
-<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Modalidade</p>
-<p class="text-lg font-bold text-fauve-800" id="cMo">--</p>
-</div>
-</div>
-<div class="mb-4">
-<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Profissional</p>
-<p class="text-base font-bold text-fauve-800" id="cNu">--</p>
-</div>
-<div class="mb-4">
-<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1">Especialidade</p>
-<p class="text-base font-bold text-fauve-800" id="cEsp">--</p>
-</div>
-<div>
-<p class="text-[11px] text-fauve-400 font-semibold uppercase tracking-wider mb-1.5">Status</p>
-<span class="text-sm font-bold px-4 py-1.5 rounded-full bg-sage-light/15 text-sage-dark inline-block" id="cSt">--</span>
-</div>
-</div>
-</div>
+<!-- Cards de consultas (gerados por JS) -->
+<div id="cCards"></div>
 
 <div id="noC" class="hidden text-center py-14 af"><p class="text-5xl mb-4 opacity-30">?</p><p class="font-display text-xl font-bold text-fauve-700">Nenhuma consulta agendada</p><p class="text-base text-fauve-400 mt-2">Entre em contato com a equipe FAUVE</p></div>
 <div id="loadC" class="text-center py-14"><p class="text-base text-fauve-400">Carregando dados...</p></div>
 
 <!-- Historico -->
-<div id="histBlock" class="hidden mt-6 af as2"><h3 class="text-[10px] font-bold text-fauve-400 uppercase tracking-[0.2em] mb-3">Historico de Consultas</h3><div id="histList" class="space-y-2.5"></div></div>
+<div id="histBlock" class="hidden mt-6 af as2"><h3 class="text-xs font-semibold text-fauve-400 mb-3">Hist&#243;rico de consultas</h3><div id="histList" class="space-y-2.5"></div></div>
 
 <!-- Paciente -->
 <div class="mt-5 bg-sand-100 rounded-xl p-5 text-center af as3"><p class="text-xs text-fauve-400">Paciente</p><p class="text-lg font-bold text-fauve-700" id="cPa">--</p></div>
@@ -340,20 +332,26 @@ function applyPatient(pn,pb,pd){
   document.getElementById('hp1n').value=pn||'N/I';document.getElementById('hp1d').value=pb;
   document.getElementById('hp2n').value=pn||'N/I';document.getElementById('hp2d').value=pb;
   document.getElementById('loadC').classList.add('hidden');
-  if(pd&&pd.consulta){
-    var c=pd.consulta;
-    document.getElementById('cDt').textContent=c.data;document.getElementById('cHr').textContent=c.hora;
-    document.getElementById('cNu').textContent=c.profissional||c.nutricionista||'--';document.getElementById('cEsp').textContent=c.especialidade||'--';document.getElementById('cMo').textContent=c.modalidade;
-    document.getElementById('cSt').textContent=c.status;document.getElementById('cPa').textContent=pn;
-    document.getElementById('cCard').classList.remove('hidden');document.getElementById('noC').classList.add('hidden');
+  // Support both old format (consulta object) and new (consultas array)
+  var consultas=[];
+  if(pd&&pd.consultas&&pd.consultas.length>0){consultas=pd.consultas}
+  else if(pd&&pd.consulta){consultas=[pd.consulta]}
+  var cDiv=document.getElementById('cCards');
+  if(consultas.length>0){
+    document.getElementById('noC').classList.add('hidden');
+    cDiv.innerHTML=consultas.map(function(c,i){
+      var label=i===0?'Pr\u00f3xima consulta':'Consulta agendada';
+      return '<div class="bg-white rounded-2xl shadow-sm border border-sand-300/50 overflow-hidden mb-4"><div class="bg-fauve/5 px-6 py-4 border-b border-sand-200"><p class="text-xs text-fauve-400 font-semibold mb-1">'+label+'</p><p class="font-display text-2xl font-bold text-fauve-800">'+c.data+'</p></div><div class="px-6 py-5 space-y-4"><div class="grid grid-cols-2 gap-4"><div><p class="text-xs text-fauve-400 mb-0.5">Hor\u00e1rio</p><p class="text-lg font-bold text-fauve-800">'+c.hora+'</p></div><div><p class="text-xs text-fauve-400 mb-0.5">Modalidade</p><p class="text-lg font-bold text-fauve-800">'+c.modalidade+'</p></div></div><div><p class="text-xs text-fauve-400 mb-0.5">Profissional</p><p class="text-base font-bold text-fauve-800">'+(c.profissional||'--')+'</p></div><div><p class="text-xs text-fauve-400 mb-0.5">Especialidade</p><p class="text-base font-bold text-fauve-800">'+(c.especialidade||'--')+'</p></div><div><p class="text-xs text-fauve-400 mb-1">Status</p><span class="text-sm font-bold px-4 py-1.5 rounded-full bg-sage-light/15 text-sage-dark inline-block">'+c.status+'</span></div></div></div>'
+    }).join('');
   }else{
-    document.getElementById('cCard').classList.add('hidden');document.getElementById('noC').classList.remove('hidden');
-    document.getElementById('cPa').textContent=pn||'Não identificado';
+    cDiv.innerHTML='';
+    document.getElementById('noC').classList.remove('hidden');
   }
+  document.getElementById('cPa').textContent=pn||'N\u00e3o identificado';
   var hist=pd&&pd.historico?pd.historico:[];
   var hL=document.getElementById('histList');var hB=document.getElementById('histBlock');
   if(!hist.length){hB.classList.add('hidden')}
-  else{hB.classList.remove('hidden');hL.innerHTML=hist.map(function(h){return'<div class="bg-white rounded-xl p-4 border border-sand-300/50 opacity-50"><div class="grid grid-cols-2 gap-2 mb-2"><div><p class="text-sm font-bold text-fauve-700">'+h.data+'</p><p class="text-xs text-fauve-400">'+h.hora+'</p></div><div class="text-right"><span class="text-[10px] font-bold px-3 py-1 rounded-full bg-sand-200 text-fauve-400 inline-block">'+h.status+'</span></div></div><div class="flex items-center gap-2 text-xs text-fauve-400"><span class="font-semibold">'+(h.profissional||'--')+'</span><span>·</span><span>'+(h.especialidade||'--')+'</span><span>·</span><span>'+h.modalidade+'</span></div></div>'}).join('')}
+  else{hB.classList.remove('hidden');hL.innerHTML=hist.map(function(h){return'<div class="bg-white rounded-xl p-4 border border-sand-300/50 opacity-50"><div class="grid grid-cols-2 gap-2 mb-2"><div><p class="text-sm font-bold text-fauve-700">'+h.data+'</p><p class="text-xs text-fauve-400">'+h.hora+'</p></div><div class="text-right"><span class="text-[10px] font-bold px-3 py-1 rounded-full bg-sand-200 text-fauve-400 inline-block">'+h.status+'</span></div></div><div class="flex items-center gap-2 text-xs text-fauve-400"><span class="font-semibold">'+(h.profissional||'--')+'</span><span>\u00b7</span><span>'+(h.especialidade||'--')+'</span><span>\u00b7</span><span>'+h.modalidade+'</span></div></div>'}).join('')}
 }
 
 nav('diario');loadPatient();
