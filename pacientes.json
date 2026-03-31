@@ -1,6 +1,4 @@
 {
-  "_TUTORIAL": "COMO EDITAR: Abra este arquivo no GitHub, clique no lápis, edite e clique Commit. O site atualiza em 2min!",
-  "_CAMPOS": "chave (usada na URL ?p=chave), nome, nascimento, consulta (data, hora, nutri, modalidade, status), historico (array)",
   "raiane": {
     "nome": "Raiane Oliveira",
     "nascimento": "27/05/1995",
@@ -36,14 +34,26 @@
         "hora": "18:00",
         "modalidade": "Online",
         "status": "Realizada"
-      }
-       {
+      },
+      {
         "data": "24 de Março, 2026",
         "hora": "16:00",
         "modalidade": "Online",
         "status": "Realizada"
       }
     ]
+  },
+  "joao": {
+    "nome": "João Silva",
+    "nascimento": "15/03/1990",
+    "consulta": {
+      "data": "15 de Abril, 2026",
+      "hora": "14:00",
+      "nutricionista": "Dra. Raiane — FAUVE clinic",
+      "modalidade": "Presencial",
+      "status": "Confirmada"
+    },
+    "historico": []
   },
   "maria": {
     "nome": "Maria Santos",
