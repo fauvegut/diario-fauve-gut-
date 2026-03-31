@@ -58,27 +58,11 @@
       {
         "data": "30 de Abril, 2026",
         "hora": "11:30",
-        "profissional": "Dra. Thicianie Fauve",
-        "especialidade": "Gastroenterologista",
+        "profissional": "Dra. Thicianie Fauve e Dra. Mariana ",
+        "especialidade": "Gastroenterologista e Nutricionista",
         "modalidade": "Presencial",
         "status": "Agendada"
       },
-      {
-        "data": "30 de Maio, 2026",
-        "hora": "11:30",
-        "profissional": "Dra. Thicianie",
-        "especialidade": "Gastroenterologista",
-        "modalidade": "Presencial",
-        "status": "Confirmada"
-      },
-      {
-        "data": "30 de Maio, 2026",
-        "hora": "11:30",
-        "profissional": "Dra. Mariana",
-        "especialidade": "Nutricionista",
-        "modalidade": "Presencial",
-        "status": "Confirmada"
-      }
     ],
     "historico": [
       {
