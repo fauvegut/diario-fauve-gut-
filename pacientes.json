@@ -54,16 +54,14 @@
   "tiago": {
     "nome": "Tiago Fernandes Curto",
     "nascimento": "04/02/2008",
-    "consultas_agendadas": [
-      {
-        "data": "30 de Abril, 2026",
-        "hora": "11:30",
-        "profissional": "Dra. Thicianie Fauve e Dra. Mariana ",
-        "especialidade": "Gastroenterologista e Nutricionista",
-        "modalidade": "Presencial",
-        "status": "Agendada"
-      },
-    ],
+    "consulta": {
+      "data": "30 de Abril, 2026",
+      "hora": "11:30",
+      "profissional": "Dra. Mariana Melendez e Dra.Thicianie",
+      "especialidade": "Nutricionista e Gastroenterologista",
+      "modalidade": "Online",
+      "status": "Confirmada"
+    },
     "historico": [
       {
         "data": "20 de Jan, 2026",
