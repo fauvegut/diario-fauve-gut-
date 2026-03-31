@@ -58,7 +58,7 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 <p class="text-base text-fauve-600 mt-2 leading-relaxed">Preencha com sinceridade para avaliarmos sua digestão.</p>
 </div>
 
-<form id="f1" action="https://formspree.io/f/mojpdooy" method="POST">
+<form id="f1" action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
 <input type="hidden" name="_subject" value="Diário Alimentar — FAUVE GUT">
 <input type="hidden" name="paciente" id="hp1n">
 <input type="hidden" name="data_nascimento" id="hp1d">
@@ -106,7 +106,7 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 <div class="px-5 pt-5 pb-6">
 <h2 class="font-display text-3xl font-bold text-fauve-800 mb-6 af">Checklist</h2>
 
-<form id="f2" action="https://formspree.io/f/xvzvajjj" method="POST">
+<form id="f2" action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
 <input type="hidden" name="_subject" value="Checklist — FAUVE GUT">
 <input type="hidden" name="paciente" id="hp2n">
 <input type="hidden" name="data_nascimento" id="hp2d">
@@ -256,7 +256,8 @@ body{font-family:'DM Sans',sans-serif;overscroll-behavior-y:contain}
 </div>
 <div class="space-y-4">
 <div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Horário</span><span class="text-base font-bold text-fauve-700" id="cHr">--</span></div>
-<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Nutricionista</span><span class="text-base font-bold text-fauve-700" id="cNu">--</span></div>
+<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Profissional</span><span class="text-base font-bold text-fauve-700" id="cNu">--</span></div>
+<div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Especialidade</span><span class="text-base font-bold text-fauve-700" id="cEsp">--</span></div>
 <div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Modalidade</span><span class="text-base font-bold text-fauve-700" id="cMo">--</span></div>
 <div class="flex justify-between items-center"><span class="text-sm text-fauve-400">Status</span><span class="text-sm font-bold px-4 py-1.5 rounded-full bg-sage-light/15 text-sage-dark" id="cSt">--</span></div>
 </div></div>
@@ -311,7 +312,7 @@ function applyPatient(pn,pb,pd){
   if(pd&&pd.consulta){
     var c=pd.consulta;
     document.getElementById('cDt').textContent=c.data;document.getElementById('cHr').textContent=c.hora;
-    document.getElementById('cNu').textContent=c.nutricionista;document.getElementById('cMo').textContent=c.modalidade;
+    document.getElementById('cNu').textContent=c.profissional||c.nutricionista||'--';document.getElementById('cEsp').textContent=c.especialidade||'--';document.getElementById('cMo').textContent=c.modalidade;
     document.getElementById('cSt').textContent=c.status;document.getElementById('cPa').textContent=pn;
     document.getElementById('cCard').classList.remove('hidden');document.getElementById('noC').classList.add('hidden');
   }else{
@@ -321,7 +322,7 @@ function applyPatient(pn,pb,pd){
   var hist=pd&&pd.historico?pd.historico:[];
   var hL=document.getElementById('histList');var hB=document.getElementById('histBlock');
   if(!hist.length){hB.classList.add('hidden')}
-  else{hB.classList.remove('hidden');hL.innerHTML=hist.map(function(h){return'<div class="bg-white rounded-xl p-4 border border-sand-300/50 opacity-50"><div class="flex justify-between items-center"><div><p class="text-sm font-bold text-fauve-700">'+h.data+'</p><p class="text-xs text-fauve-400">'+h.hora+' — '+h.modalidade+'</p></div><span class="text-xs font-bold px-3 py-1 rounded-full bg-sand-200 text-fauve-400">'+h.status+'</span></div></div>'}).join('')}
+  else{hB.classList.remove('hidden');hL.innerHTML=hist.map(function(h){return'<div class="bg-white rounded-xl p-4 border border-sand-300/50 opacity-50"><div class="flex justify-between items-center"><div><p class="text-sm font-bold text-fauve-700">'+h.data+'</p><p class="text-xs text-fauve-400">'+h.hora+' — '+(h.profissional||'')+'</p><p class="text-xs text-fauve-400">'+(h.especialidade||'')+' — '+h.modalidade+'</p></div><span class="text-xs font-bold px-3 py-1 rounded-full bg-sand-200 text-fauve-400">'+h.status+'</span></div></div>'}).join('')}
 }
 
 nav('diario');loadPatient();
