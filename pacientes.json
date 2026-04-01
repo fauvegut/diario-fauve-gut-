@@ -251,6 +251,54 @@
         "especialidade": "Psicóloga",
         "modalidade": "Online",
         "status": "Realizada"
+         }
+    ]
+  },
+  "osmar": {
+    "nome": "Osmar Sais Furtado",
+    "nascimento": "09/06/1978",
+    "consultas": [
+      {
+        "data": "15 de abril, 2026",
+        "hora": "15:30",
+        "profissional": "Dra. Thicianie",
+        "especialidade": "Gastroenterologista",
+        "modalidade": "Presencial",
+        "status": "Confirmada"
+      },
+      {
+        "data": "15 de abril, 2026",
+        "hora": "15:30",
+        "profissional": "Dra. Mariana",
+        "especialidade": "Nutricionista",
+        "modalidade": "Presencial",
+        "status": "Confirmada"
+      }
+    ],
+    "historico": [
+      {
+        "data": "19 de março, 2026",
+        "hora": "17:00",
+        "profissional": "Dra. Thicianie",
+        "especialidade": "Gastroenterologista",
+        "modalidade": "Online",
+        "status": "Realizada"
+      },
+      {
+        "data": "18 de março, 2026",
+        "hora": "16:00",
+        "profissional": "Dra. Mariana",
+        "especialidade": "Nutricionista",
+        "modalidade": "Online",
+        "status": "Realizada"
+      },
+      {
+        "data": "25 de março, 2026",
+        "hora": "16:00",
+        "profissional": "Dra. Marcela",
+        "especialidade": "Psicóloga",
+        "modalidade": "Online",
+        "status": "Realizada"
       }
     ]
   }
