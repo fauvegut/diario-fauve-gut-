@@ -299,7 +299,7 @@
         "especialidade": "Psicóloga",
         "modalidade": "Online",
         "status": "Realizada"
-      }
+     }
     ]
   },
   "anapinheiro": {
@@ -307,7 +307,7 @@
     "nascimento": "11/06/1992",
     "consultas": [
       {
-        "data": "13 de Maio,2026",
+        "data": "13 de Maio, 2026",
         "hora": "16:30",
         "profissional": "Dra. Thicianie",
         "especialidade": "Gastroenterologista",
@@ -315,10 +315,10 @@
         "status": "Confirmada"
       },
       {
-        "data": "13 de Maio,2026",
+        "data": "13 de Maio, 2026",
         "hora": "16:30",
         "profissional": "Dra. Mariana",
-        "especialidade": "",
+        "especialidade": "Nutricionista",
         "modalidade": "Presencial",
         "status": "Confirmada"
       }
@@ -336,7 +336,7 @@
         "data": "19 de nov, 2025",
         "hora": "16:00",
         "profissional": "Dra. Mariana",
-        "especialidade": "Gastroenterologista",
+        "especialidade": "Nutricionista",
         "modalidade": "Presencial",
         "status": "Realizada"
       },
@@ -352,7 +352,7 @@
         "data": "10 de dez, 2025",
         "hora": "16:30",
         "profissional": "Dra. Mariana",
-        "especialidade": "",
+        "especialidade": "Nutricionista",
         "modalidade": "Presencial",
         "status": "Realizada"
       },
@@ -368,7 +368,7 @@
         "data": "22 de Jan, 2026",
         "hora": "16:30",
         "profissional": "Dra. Mariana",
-        "especialidade": "",
+        "especialidade": "Nutricionista",
         "modalidade": "Presencial",
         "status": "Realizada"
       },
@@ -384,7 +384,7 @@
         "data": "13 de Março, 2026",
         "hora": "16:00",
         "profissional": "Dra. Mariana",
-        "especialidade": "",
+        "especialidade": "Nutricionista",
         "modalidade": "Presencial",
         "status": "Realizada"
       }
