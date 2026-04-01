@@ -196,7 +196,7 @@
         "especialidade": "Psicóloga",
         "modalidade": "Presencial",
         "status": "Realizada"
-      }
+    }
     ]
   },
   "maria": {
@@ -213,8 +213,6 @@
       }
     ],
     "historico": []
- }
-    ]
   },
   "Ana": {
     "nome": "Ana Lizete Moreira de Oliveira",
@@ -255,4 +253,5 @@
         "status": "Realizada"
       }
     ]
-  },
+  }
+}
